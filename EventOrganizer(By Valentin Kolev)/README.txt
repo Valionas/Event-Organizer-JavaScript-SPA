@@ -8,5 +8,4 @@ There are 3 external libraries which were used in the project :
 	2) SweetAlert - customized alert functionality
 	3) AnimateCSS - useful and free animation functionality
 
-I've used live-server to test and capture the different outcomes in imageShowCase folder.
 I've written comments on most parts of my JavaScript code to ensure that it is understandable.
