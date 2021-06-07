@@ -1,5 +1,4 @@
 //Imports
-// import swal from 'sweetalert';
 import {html,render} from './node_modules/lit-html/lit-html.js';
 
 //DOM objects
@@ -10,10 +9,6 @@ const djBtn = document.getElementById("djBtn");
 const djControls = document.getElementById("djControls");
 const showSection = document.getElementById('showSect');
 let inputField = document.querySelector('input');
-
-//
-let dizzyMeter = 0;
-const toastBtn = document.getElementById("toastBtn");
 
 //To check for possible vowel in the first letter
 let vowelArray = ['A','E','I','O','U','a','e','i','o','u'];
@@ -39,7 +34,6 @@ submitBtn.addEventListener('click',addGuest);
 showBtn.addEventListener('click',updateList);
 clearBtn.addEventListener('click',clearData);
 djBtn.addEventListener('click',startMusic);
-toastBtn.addEventListener('click',makeToast);
 
 // data -> list
 function updateList(event){
@@ -112,28 +106,7 @@ function clearData(ev){
 }
 
 function startMusic(){
-    //Mahalo - Easy To Love (ft. Vivaswan)
     djControls.style.display="block";
     djControls.play();
 }
 
-function makeToast(){
-    dizzyMeter+=25;
-    if(dizzyMeter>100){
-        return swal("I think we should stop for tonight ...", "Have a rest now! ","error");
-    }
-    switch(dizzyMeter){
-        case 25:
-            swal("Cheers!","The show must go on!", "success");
-            break;
-        case 50:
-            swal("Lets celebrate!","You start to feel a bit dizzy ...?", "success");
-            break;
-        case 75:
-            swal("Woah, this one was good", "Are you sure you can continue...?","warning");
-            break;
-        case 100:
-            swal("Well, be careful next time", "The floor has never been better to sleep ...","error");
-            break;       
-    }
-}
