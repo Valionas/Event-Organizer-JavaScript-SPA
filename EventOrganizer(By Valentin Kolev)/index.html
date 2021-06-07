@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Organizer</title>
+    <link rel="stylesheet" href="design.css">
+    <script defer type="module" src="app.js"></script>
+    <!-- Sweet Alert Package -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Custom Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+    <!-- Animate CSS library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <h1 style="color:white">The  Event Organizer</h1>
+    <div class="content">
+        <section class="showSection" id="showSect">
+        </section>
+        <form class="peopleForm ">
+            <h3 >What is your guest's name</h3>
+            <input name="guests" type="text" id="guestName" placeholder="Write here ...">
+            <section class="controls">
+                <button class="buttons" id="submitBtn">Invite a guest</button>
+                <button class="buttons" id="showBtn">Start the event</button>
+                <button class="buttons" id="clearBtn">Clear the list</button>
+            </section>
+        </form>
+        <section class="Event Options">
+            <button class="buttons" id="toastBtn">Make a toast</button>
+            <button class="buttons" id="djBtn">Call a DJ</button>
+
+            <audio id="djControls" controls>
+                <source src="song.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+        </section>
+    </div>
+</body>
+
+</html>
